@@ -139,3 +139,130 @@ Determine if the claim is factually accurate based on the supporting document. A
 - **No:**  
   If the supporting document contradicts the question and supports the original claim is **True**.  
 
+
+
+
+
+
+
+# 🚀 Claim Verification & RAG Prompts Collection
+# Use these prompt templates for Zero-shot, Naive RAG, Advanced RAG, Scraping, QDEV,
+# Question Generation, QA pairs, and Error Categorization.
+# Includes English + Telugu variants.
+
+# =========================
+# 🔹 Zero-shot Prompts
+# =========================
+
+# English
+prompt = f"Determine the validity of the following claim and label it as 'TRUE' or 'FAKE'. Provide only 'TRUE' or 'FAKE' on the first line, followed by a justification on the second line: {claim}"
+
+# Telugu
+prompt = f"Determine the validity of the following claim and label it as 'TRUE' or 'FAKE'. Provide only 'TRUE' or 'FAKE' on the first line, followed by a justification in Telugu in the second line: {claim}"
+
+
+# =========================
+# 🔹 Naive RAG
+# =========================
+
+# English: Retrieve supporting docs
+cohere_prompt = f"Provide supporting documents for the claim: {claim}"
+
+prompt = f"Here are the relevant documents: {all_docs_content} Based on the above information, provide in the first line only 'FAKE' or 'TRUE'. And provide the justification from the given context in the second line. '{claim}'."
+
+# Telugu: Retrieve supporting docs
+cohere_prompt = f"Provide supporting documents for the claim in Telugu: {claim}"
+
+prompt = f"Here are the relevant documents: {all_docs_content} Based on the above information, provide in the first line only 'FAKE' or 'TRUE'. And provide the justification in Telugu from the given context in the second line. '{claim}'."
+
+
+# =========================
+# 🔹 Advanced RAG
+# =========================
+
+# Query rewriting
+f"Rewrite the following query to improve retrieval performance: {query}"
+
+# Query rewriting in Telugu
+f"Rewrite the following query in Telugu to improve retrieval performance: {query}"
+
+# Prompt compression
+f"Compress the following prompt while retaining essential information: {prompt}"
+
+
+# =========================
+# 🔹 Automatic Scraping
+# =========================
+
+# Telugu
+prompt = f"Label the following claim as 'True' or 'Fake' from the given context. Answer with either 'TRUE' or 'FAKE' only in the first line. Also add another line for justification in Telugu from the given context only. Context: {refined_context} . Claim: {claim}"
+
+# English
+prompt = f"Label the following claim as 'True' or 'Fake' from the given context. Answer with either 'TRUE' or 'FAKE' only in the first line. Also add another line for justification from the given context only. Context: {refined_context} . Claim: {claim}"
+
+
+# =========================
+# 🔹 QDEV (Question-driven Evidence Verification)
+# =========================
+
+# English
+prompt = f"Label the following claim as 'True' or 'Fake' from the given context. Answer with either 'TRUE' or 'FAKE' only in the first line. Also add another line for justification from the given context only. Context: {contextQuestions} . Claim: {claim}"
+
+# Telugu
+prompt = f"Label the following claim as 'True' or 'Fake' from the given context. Answer with either 'TRUE' or 'FAKE' only in the first line. Also add another line for justification in Telugu from the given context only. Context: {contextQuestions} . Claim: {claim}"
+
+
+# =========================
+# 🔹 Question Generation
+# =========================
+
+# English
+prompt = f"{questions} \n Claim: {claim}. Provide me only with similar questions relevant for the claim given in similar json format. Provide boolean, Abstractive, Extractive questions."
+
+# Telugu
+prompt = f"{questions} \n Claim: {claim}. Provide me only with similar questions relevant for the claim given in similar json format. Provide boolean, Abstractive, Extractive questions in Telugu."
+
+
+# =========================
+# 🔹 Question-Answer Pairs
+# =========================
+
+# English
+prompt = f"{questions and answers} \n Claim: {claim}. Provide me only with similar questions and answer pairs relevant for the claim given in similar json format. Provide boolean, Abstractive, Extractive questions and answer pairs in a single list json. Do not leave question and answer pair empty."
+
+# Telugu
+prompt = f"{questions and answers} \n Claim: {claim}. Provide me only with similar questions and answer pairs in Telugu relevant for the claim given in similar json format. Provide boolean, Abstractive, Extractive questions and answer pairs in a single list json. Do not leave question and answer pair empty."
+
+
+# =========================
+# ⚡ Error Categorization
+# =========================
+
+# Telugu Quantified Errors
+def get_rag_error_category(claim, predicted_label, actual_label, predicted_justification, actual_justification):
+    prompt = (
+        f"Classify the following errors into one of the categories: "
+        f"Hallucinations, Biases, Retrieval errors and other.\n\n"
+        f"Claim: {claim}\n"
+        f"Predicted Label: {predicted_label}\n"
+        f"Actual Label: {actual_label}\n"
+        f"Predicted Justification: {predicted_justification}\n"
+        f"Actual Justification: {actual_justification}\n\n"
+        f"Provide only the error category on the first line, followed by a brief explanation."
+    )
+    return prompt
+
+# English Quantified Errors
+def get_rag_error_category(claim, predicted_label, actual_label, predicted_justification, actual_justification):
+    prompt = (
+        f"Classify the following errors into one of the categories: "
+        f"Hallucinations, Biases, Translation errors, Retrieval errors and other.\n\n"
+        f"Claim: {claim}\n"
+        f"Predicted Label: {predicted_label}\n"
+        f"Actual Label: {actual_label}\n"
+        f"Predicted Justification: {predicted_justification}\n"
+        f"Actual Justification: {actual_justification}\n\n"
+        f"Provide only the error category on the first line, followed by a brief explanation."
+    )
+    return prompt
+
