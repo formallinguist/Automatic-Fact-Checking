@@ -266,7 +266,7 @@ def get_rag_error_category(claim, predicted_label, actual_label, predicted_justi
     )
     return prompt
 
-# Results of Models (English vs Telugu)
+# Results of Models for three runs for English and  Telugu
 
 | Model          | Approach | F1 (EN)      | METEOR (EN)  | R-L (EN)    | ChrF (EN)   | BLEURT (EN) | BERTScore (EN) | F1 (TE)      | METEOR (TE)  | R-L (TE)    | ChrF (TE)   | BLEURT (TE) | BERTScore (TE) |
 |----------------|----------|--------------|--------------|-------------|-------------|-------------|----------------|--------------|--------------|-------------|-------------|-------------|----------------|
