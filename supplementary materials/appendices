@@ -21,3 +21,58 @@ LLM Generation
 temperature: 0.5
 max tokens: 4000
 top p: 1.0
+
+
+## Fact-Checking Sources
+
+| **Source**              | **URL** |
+|--------------------------|---------|
+| India Today              | [Link](https://www.indiatoday.in/fact-check) |
+| Telugu Post Fact Check   | [Link](https://telugupost.com/fact-check) |
+| News Meter               | [Link](https://newsmeter.in/top-stories) |
+| News Mobile              | [Link](https://www.newsmobile.in/news/nation/) |
+| PolitiFact               | [Link](https://www.politifact.com/) |
+| DW                       | [Link](https://www.dw.com/en/top-stories/s-9097) |
+| Fact Check               | [Link](https://www.factcheck.org/) |
+| Times of India           | [Link](https://timesofindia.indiatimes.com/) |
+| AFP Fact Check           | [Link](https://factcheck.afp.com/) |
+| Hindustan Times          | [Link](https://www.hindustantimes.com/) |
+| Press Information Bureau | [Link](https://www.pib.gov.in/factcheck.aspx) |
+| India TV                 | [Link](https://www.indiatvnews.com/) |
+| News 18                  | [Link](https://www.news18.com/) |
+| Boom                     | [Link](https://www.boomlive.in/fact-check) |
+| Geo News                 | [Link](https://www.geo.tv/category/geo-fact-check) |
+| Digit Eye India          | [Link](https://digiteye.in/) |
+| The Indian Express       | [Link](https://indianexpress.com/) |
+| Republic World           | [Link](https://www.republicworld.com/) |
+| Press Trust of India     | [Link](https://www.ptinews.com/fact-check) |
+| Alt News                 | [Link](https://www.altnews.in/) |
+| The Economic Times       | [Link](https://economictimes.indiatimes.com/) |
+| NDTV                     | [Link](https://www.ndtv.com/topic/fact~check) |
+| Factly                   | [Link](https://factly.in/) |
+| Vishvasnews              | [Link](https://www.vishvasnews.com/english/home-english/) |
+| The Quint                | [Link](https://www.thequint.com/) |
+| USA Today                | [Link](https://eu.usatoday.com/) |
+| DT Next                  | [Link](https://www.dtnext.in/) |
+| The Week                 | [Link](https://www.theweek.in/) |
+| Namibia Fact Check       | [Link](https://namibiafactcheck.org.na/) |
+| Fact Crescendo           | [Link](https://english.factcrescendo.com/) |
+| Logically Facts          | [Link](https://www.logicallyfacts.com/en) |
+| DFRAC                    | [Link](https://dfrac.org/en/) |
+| Pesa Check               | [Link](https://pesacheck.org/) |
+| ABP                      | [Link](https://news.abplive.com/fact-check) |
+| OP India                 | [Link](https://www.opindia.com/) |
+| News Checker             | [Link](https://newschecker.in/) |
+| Deccan Herald            | [Link](https://www.deccanherald.com/) |
+| The Print                | [Link](https://theprint.in/) |
+| DNA                      | [Link](https://www.dnaindia.com/) |
+| Live Mint                | [Link](https://www.livemint.com/) |
+| Gulf News                | [Link](https://gulfnews.com/uae) |
+| Economic Times           | [Link](https://economictimes.indiatimes.com/?from=mdr) |
+| Business World           | [Link](https://www.businessworld.in/) |
+| Smithsonian Magazine     | [Link](https://www.smithsonianmag.com/) |
+| The Hindu                | [Link](https://www.thehindu.com/) |
+| BBC                      | [Link](https://www.bbc.com/) |
+| The Statesman            | [Link](https://www.thestatesman.com/) |
+| Wion News                | [Link](https://www.wionews.com/) |
+| Zee News                 | [Link](https://zeenews.india.com/) |
