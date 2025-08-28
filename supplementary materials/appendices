@@ -1,1 +1,6 @@
-
+#Computational Resources
+All experiments are run on A100 GPUs. The runtime for each experiment varies as follows:
+Simple Prompting takes two hours each, while Automatic Scraping
+takes two and half hours. Naive RAG experiments require four hours for English and six
+hours for Telugu to complete, whereas Advanced RAG takes six hours for English and eight
+hours for Telugu to complete. 
