@@ -76,3 +76,66 @@ top p: 1.0
 | The Statesman            | [Link](https://www.thestatesman.com/) |
 | Wion News                | [Link](https://www.wionews.com/) |
 | Zee News                 | [Link](https://zeenews.india.com/) |
+
+
+# Inter Annotation Guidelines
+
+## 1. Guidelines for True and False Labels
+
+### Objective
+Determine if the claim is factually accurate based on the supporting document. Annotators are instructed to assign one of two labels: **True** or **False**, following the below guidelines.
+
+---
+
+### Rules for Labels
+
+#### **True**
+- The claim is directly supported by the fact-checking article or news article and discussed in the gold justification.  
+- Minor phrasing differences (e.g., *"helped identify clusters"* vs. *"detected clusters"*) are acceptable.  
+- Claims with accurate numbers/dates (e.g., *"55,342 cases"*) are considered True even if the wording varies.  
+
+**Example:**  
+- **Claim:** "WHO praises India’s Aarogya Setu app for identifying clusters."  
+- **Justification:** "WHO Director-General acknowledged the app’s role in identifying clusters (Source X)."  
+- **Label:** **True**
+
+---
+
+#### **False**
+- The False claim is supported by fact-checking sources.  
+- The supporting document provides sufficient evidence (from the fact-checking article).  
+- The claim contains fabricated or incorrect information, as discussed in the fact-checking article and gold justifications.  
+- **Partially True Claims:** Label as **False** if the claim is misleading despite containing partial truth, as outlined in the fact-checking article and gold justification.  
+
+**Example:**  
+- **Claim:** "COVID-19 cases dropped to 55,342 due to improved recovery rates."  
+- **Gold Justification:** "The claim is False because the supporting document X says COVID-19 cases dropped to 45,000 and there is a high recovery rate."  
+  *(Fact-checking article label: Partially True / Misleading / Partially False)*  
+- **Label:** **False** (as it spreads misinformation)
+
+---
+
+## 2. Boolean Answers (Yes/No)
+
+### Direct QA Pairs
+
+**Objective:** Answer Yes/No questions based strictly on the claim and supporting document.
+
+- **Yes:**  
+  If the claim is **True**, and the question directly reflects the claim, and the supporting document agrees with it.  
+
+- **No:**  
+  If the claim is **False**, and the question directly reflects the claim, and the supporting document agrees with it.  
+
+---
+
+### In-Direct QA Pairs
+
+**Objective:** Answer Yes/No questions based strictly on the claim and supporting document.
+
+- **Yes:**  
+  If the supporting document confirms a corrective or related question that helps show the claim is **False**.  
+
+- **No:**  
+  If the supporting document contradicts the question and supports the original claim is **True**.  
+
