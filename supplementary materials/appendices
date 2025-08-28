@@ -7,7 +7,7 @@ hours for Telugu to complete.
 
 
 
-Hyperparameters used for Naive RAG and Advanced RAG pipeline
+##Hyperparameters used for Naive RAG and Advanced RAG pipeline
 
 Chunking
 chunk size: 500
