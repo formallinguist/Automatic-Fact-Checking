@@ -4,3 +4,20 @@ Simple Prompting takes two hours each, while Automatic Scraping
 takes two and half hours. Naive RAG experiments require four hours for English and six
 hours for Telugu to complete, whereas Advanced RAG takes six hours for English and eight
 hours for Telugu to complete. 
+
+
+
+Hyperparameters used for Naive RAG and Advanced RAG pipeline
+
+Chunking
+chunk size: 500
+chunk overlap: 50
+
+
+Embedding
+embedding dim: 1024
+
+LLM Generation
+temperature: 0.5
+max tokens: 4000
+top p: 1.0
