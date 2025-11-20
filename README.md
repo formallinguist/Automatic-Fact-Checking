@@ -5,6 +5,8 @@ False information poses a significant global challenge, and manually verifying c
 
 
 citation
+
+
 @InProceedings{chikkala-EtAl:2025:lowresnlp,
   author    = {Chikkala, Ravi Kiran  and  Anikina, Tatiana  and  Skachkova, Natalia  and  Vykopal, Ivan  and  Agerri, Rodrigo  and  van Genabith, Josef},
   title     = {Automatic Fact-checking in English and Telugu},
